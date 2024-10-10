@@ -18,11 +18,10 @@
     ?>
     <header>
         <div class="logo">
-            <h1> Aurora </h1>
+            <a href="home.php"><img class="hover" src="../images/AuroraLogo.png"/></a>
         </div>
         <nav>
             <a href="home.php"> Home </a>
-            <a href="about.php"> About </a>
             <a class="active" href="#"> Profile </a>
             <a href="logout.php"> Logout </a>
         </nav>

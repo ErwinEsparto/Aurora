@@ -16,10 +16,18 @@ header {
     box-shadow: 0 0 15px black;
     width: 100%;
 }
-.logo h1 {
-    margin: 0 0 0 40px;
-    font-size: 3em;
-    color: #FFF0D1;
+.logo img {
+    width: 150px;
+    height: 150px;
+    margin: -20px 0 -20px 0;
+    position:relative;
+    left: 70px;
+    border-radius: 50%;
+    transition: 2s ease;
+    &:hover {
+        background: radial-gradient(circle, rgb(0, 0, 0)30%, rgb(133, 131, 131));
+        box-shadow: 0 5px 50px 20px rgba(255, 255, 255, 0.6);
+    }
 }
 nav {
     display: flex;

@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/login.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/login.jpg");
     background-size: cover;
     font-family: 'Century Gothic';
     padding: 0;
@@ -15,12 +15,23 @@ header {
     padding: 20px 0 20px 0;
     box-shadow: 0 0 15px black;
     width: 100%;
+    position:sticky;
+    top: 0;
 }
-.logo h1 {
-    margin: 0 0 0 40px;
-    font-size: 3em;
-    color: #FFF0D1;
+.logo img {
+    width: 150px;
+    height: 150px;
+    margin: -20px 0 -20px 0;
+    position:relative;
+    left: 70px;
+    border-radius: 50%;
+    transition: 2s ease;
+    &:hover {
+        background: radial-gradient(circle, rgb(0, 0, 0)30%, rgb(133, 131, 131));
+        box-shadow: 0 5px 50px 20px rgba(255, 255, 255, 0.6);
+    }
 }
+
 nav {
     display: flex;
     align-items: center;
@@ -42,4 +53,90 @@ nav a {
 nav .active {
     color: #B99470;
     pointer-events: none;
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section#main {
+    background-image: url("../images/about.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+section#main .title {
+    padding: 50px;
+}
+section#main .title h1 {
+    font-family:'Papyrus';
+    font-size: 10em;
+    margin: 0;
+    text-align: center;
+}
+section#main .title .description {
+    font-family: 'Monaco';
+    font-size: 2.5em;
+    margin: 50px 0 50px 0;
+    text-align: justify;
+    text-align-last: center;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.first, .second, .third {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 30px 0;
+    color: white;
+    
+}
+.first img, .second img, .third img {
+    width: 500px;
+    height: 300px;
+    border-radius: 5%;
+}
+.firstText, .secondText, .thirdText{
+    width: 40%;
+}
+.firstDescription, .secondDescription, .thirdDescription {
+    font-size: 1em;
+    padding: 0 30px 0 30px;
+    text-align: justify;
+}
+section#map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contactus {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.contacts {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 0;
+    margin-top: 70px;
+    width: 100%;
+}
+.contacts .contactone, .contacts .contacttwo, .contacts .contactthree {
+    width: 25%;
+    margin: 20px 70px;
+    text-align: justify;
+    text-align-last: center;
+}
+.contacts .contactone img, .contacts .contacttwo img, .contacts .contactthree img {
+    width: 30px;
+    text-align: center;
 }
