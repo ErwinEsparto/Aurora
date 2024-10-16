@@ -15,6 +15,10 @@
         $DBPass = "";
         $DBName = "auroradb";
         $conn = mysqli_connect($DBHost, $DBUser, $DBPass, $DBName);
+
+        $getData = "SELECT * FROM users WHERE userId='".$_SESSION['userID']."'";
+        $result = mysqli_query($conn, $getData);
+        $account = mysqli_fetch_assoc($result);
     ?>
     <header>
         <div class="logo">
@@ -37,33 +41,33 @@
                         <img src="../images/sample.jpg"/>
                     </div>
                     <div class="name">
-                        <p> Erwin Esparto </p>
+                        <p> <?php echo $account['userFname']; ?> <?php echo $account['userLname']; ?></p>
                     </div>
-                    <a href="#"> Change Password </a>
+                    <a href="changepassword.php"> Change Password </a>
                 </div>
                 <div class="information">
                     <div class="informationhead">
                         <div class="title">
                             <h2> Personal Information </h2>
                         </div>
-                        <a href="#"> Edit Profile </a>
+                        <a href="editprofile.php"> Edit Profile </a>
                     </div>
                     <div class="columns">
                         <div class="columnOne">
                             <h3> First Name </h3>
-                            <p> Erwin </p>
+                            <p> <?php echo $account['userFname']; ?> </p>
                             <h3> Email Address </h3>
-                            <p> eesparto@gmail.com </p>
+                            <p> <?php echo $account['userEmail']; ?> </p>
                             <h3> Username </h3>
-                            <p> Irwen </p>
+                            <p> <?php echo $account['userName']; ?> </p>
                         </div>
                         <div class="columnTwo">
                             <h3> Last Name </h3>
-                            <p> Esparto </p>
+                            <p> <?php echo $account['userLname']; ?> </p>
                             <h3> Contact Number </h3>
-                            <p> 091234567890 </p>
+                            <p> <?php echo $account['userContact']; ?> </p>
                             <h3> Date Created </h3>
-                            <p> 2024-10-02 </p>
+                            <p> <?php echo $account['dateCreated']; ?> </p>
                         </div>
                     </div>
                 </div>
